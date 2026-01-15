@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Dev Platform</title>
+</head>
+<body>
+    <h1>AI Dev Platform - Upload Python Code</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="codefile" accept=".py"/>
+        <button type="submit">Analyze</button>
+    </form>
+    {% if result %}
+        <h2>Results:</h2>
+        <p>Syntax: {{ result.syntax }}</p>
+        <p>Style: {{ result.style }}</p>
+    {% endif %}
+</body>
+</html>
